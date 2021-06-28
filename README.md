@@ -7,5 +7,4 @@
 
 -git commit practice
 
-아무거나1
-아무거나2
+-push & pull / commit
