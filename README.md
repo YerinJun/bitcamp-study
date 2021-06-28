@@ -6,3 +6,6 @@
 -git 활용 방법을 배워야함.
 
 -git commit practice
+
+아무거나1
+아무거나2
