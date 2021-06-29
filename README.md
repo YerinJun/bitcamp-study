@@ -8,3 +8,5 @@
 -git commit practice
 
 -push & pull / commit
+
+-수정
