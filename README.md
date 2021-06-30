@@ -10,4 +10,5 @@
 -.git 은 local repositories <- 절대 건들지 말 것!
 
 ##Day3
--
+-Seperate src file & bin file
+-Not certain how to compile on command promt

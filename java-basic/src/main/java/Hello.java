@@ -5,6 +5,7 @@ class Hello {
         | 'entry point'라 부름  | 
     */
     public static void main(String[] args){
-    System.out.println("Hello, Wrold!");
+        System.out.println("Hello, Wrold!");
+        System.out.println("안녕!");
     }
 }
