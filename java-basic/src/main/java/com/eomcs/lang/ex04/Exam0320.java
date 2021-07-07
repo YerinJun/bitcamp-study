@@ -10,7 +10,7 @@ public class Exam0320 {
     int age1 = 20;
     
     //r-value 자리에 변수를 놓을 수 있다.
-    int age2 = age1;
+    int age2 = age1;    
     
     //의미
     //- age1에 저장된 값을 age2에 복사하라!
