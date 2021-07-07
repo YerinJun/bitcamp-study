@@ -23,6 +23,6 @@ public class Exam0340 {
     System.out.println(9876543211234657.89);
     System.out.println("----------------------------");
 
-    System.out.println(7*0.001);
+    System.out.println(7*0.1);
   }
 }

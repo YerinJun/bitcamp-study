@@ -1,4 +1,4 @@
-package come.eomcs.lang.ex03;
+package com.eomcs.lang.ex03;
 
 public class Exam0220 {
   public static void main(String[] args) {
@@ -17,6 +17,6 @@ public class Exam0220 {
     System.out.println(0xffaa);
     System.out.println(0xff_aa);
 
-    
+
   }
 }

@@ -14,6 +14,5 @@ public class Exam0230 {
     System.out.println(Long.MIN_VALUE);
 
 
-
   }
 }
