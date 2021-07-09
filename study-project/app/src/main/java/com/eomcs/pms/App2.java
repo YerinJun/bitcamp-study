@@ -1,32 +1,66 @@
 package com.eomcs.pms;
 
+import java.sql.Date;
+import java.util.Scanner;
+
 public class App2 {
 
   public static void main(String[] args) {
-    System.out.print("[");
-    System.out.print("프로젝트");
-    System.out.println("]");
+    System.out.println("[프로젝트]");
+    Scanner keyboardScan = new Scanner(System.in);
 
-    System.out.print("번호: ");
-    System.out.println(1201);
+    final int LENGTH = 100;
 
-    System.out.print("프로젝트명: ");
-    System.out.println("미니 프로젝트 관리 시스템 개발");
+    int[] no = new int[LENGTH];
+    String[] title = new String[LENGTH];
+    String[] content = new String[LENGTH];
+    Date[] startDate = new Date[LENGTH];
+    Date[] endDate = new Date[LENGTH];
+    String[] owner = new String[LENGTH];
+    String[] members = new String[LENGTH];
 
-    System.out.print("내용: ");
-    System.out.println("소규모 팀을 위한 프로젝트 관리 시스템을 개발한다.");
 
-    System.out.println("시작일: " + "2020-01-01");
+    int size = 0;
 
-    System.out.println("종료일: " + "2020-12-31");
+    for (int i = 0; i < LENGTH; i++) {
+      System.out.print("번호? ");
+      no[i] = Integer.valueOf(keyboardScan.nextLine());
 
-    System.out.println("만든이: " + "홍길동");
-    
-    System.out.println("팀원: "
-        + "홍길동" + ","
-        + "김구" + ","
-        + "유관순" + ","
-        + "안중근" + ","
-        + "윤봉길");
+      System.out.print("프로젝트명? ");
+      title[i] = keyboardScan.nextLine();
+
+      System.out.print("내용? ");
+      content[i] = keyboardScan.nextLine();
+
+      System.out.print("시작일? ");
+      startDate[i] = Date.valueOf(keyboardScan.nextLine());
+
+      System.out.print("종료일? ");
+      endDate[i] = Date.valueOf(keyboardScan.nextLine());
+
+      System.out.print("만든이? ");
+      owner[i] = keyboardScan.nextLine();
+
+      System.out.print("팀원? ");
+      members[i] = keyboardScan.nextLine();
+
+      size++;
+      System.out.println();
+      System.out.print("계속 입력하시겠습니까? (y/N)");
+      String str = keyboardScan.nextLine();
+      if (!str.equalsIgnoreCase("y")) {
+        break;
+      }
+      System.out.println();
+    }
+    keyboardScan.close();
+
+    System.out.println("--------------------------------");
+
+    for (int i =0; i < size; i++) {
+      System.out.printf("%d, %s, %s, %s, %s, %s, %s", 
+          no[i], title[i], content[i], startDate[i], endDate[i], owner[i], members[i]);
+    }
   }
 }
+
