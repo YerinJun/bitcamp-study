@@ -4,6 +4,9 @@ package com.eomcs.lang.ex99;
 //
 public class Exam0220 {
   public static void main(String[] args) {
+    //java.io.InputStream keyboard = System.in;
+    //java.util.Scanner keyScan = new java.util.Scanner(keyboard);
+
     java.io.InputStream keyboard = System.in;
     java.util.Scanner keyScan = new java.util.Scanner(keyboard);
 

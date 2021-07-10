@@ -6,9 +6,9 @@ package com.eomcs.lang.ex04;
 
 public class Exam0310 {
   public static void main(String[] args) {
-    
+
     int age = 20;
-    
+
     //println() 메서드(도구)
     //- 콘솔(console)로 값을 출력할 때 사용하는 도구이다.
     //- 즉 JVM의 표준 출력 장치로 값을 출력한다.
@@ -16,5 +16,7 @@ public class Exam0310 {
     //    System.out.println(리터럴 또는 변수, 결과가 생성되는 명령문)
     //
     System.out.println(age); 
+
+    age = 30;
   }
 }
