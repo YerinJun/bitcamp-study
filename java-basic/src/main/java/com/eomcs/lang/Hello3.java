@@ -54,7 +54,7 @@ class Hello3 {
   public static void main(String[] args) {
     System.out.println("Hello, World!");
     System.out.println("HEllo!");
-    System.out.println("sdfkljslkdjfsdgs");
+    System.out.println("한글 안녕하세요");
   }
 }
 
