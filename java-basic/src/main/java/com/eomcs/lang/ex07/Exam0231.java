@@ -1,8 +1,8 @@
 package com.eomcs.lang.ex07;
 
-// # 메서드 : 개념 및 기본 문법 III
+//# 메서드 : 개념 및 기본 문법 III
 //
-public class Exam0230 {
+public class Exam0231 {
 
   // 3) 메서드 : 파라미터(X), 리턴값(O)
   //    => 메서드 블록을 실행한 후 값을 리턴하는 메서드.
@@ -38,3 +38,5 @@ public class Exam0230 {
     //    int r2 = hello(); // 컴파일 오류!
   }
 }
+
+
