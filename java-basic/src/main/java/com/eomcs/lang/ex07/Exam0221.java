@@ -15,6 +15,5 @@ public class Exam0221 {
     //    hello(20, "윤봉길"); // 컴파일 오류!
     //    String r = hello("안중근", 30); // 컴파일 오류!
     //    void r = hello("안중근", 30); // 컴파일 오류!
-    hello("내이름",50);
   }
 }

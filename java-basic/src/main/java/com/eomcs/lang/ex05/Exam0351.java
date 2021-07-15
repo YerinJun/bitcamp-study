@@ -27,7 +27,7 @@ public class Exam0351 {
     //  & 0000 0001
     // --------------
     //    0000 0001 (나머지는 1이다)
-    System.out.println("-----------------------------");
+    System.out.println("--------------------");
 
 
     System.out.println(57 % 4);
