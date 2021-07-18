@@ -48,6 +48,8 @@ public class Exam0130 {
     //     한글은 대소문자가 없기 때문에 의미없다.
     System.out.printf("%1$tp\n", today);
 
+    System.out.printf("%1$tY-%1$tm-%1$td %1$tp %1$tI:%1$tM:%1$tS\n", today);
+
     // 년-월-일 시:분:초를 출력하라! 예) 2019-01-04 12:04:30
     System.out.printf("%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS\n", today);
   }

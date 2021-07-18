@@ -32,5 +32,9 @@ public class Exam0430 {
     // 이전에 했던대로 (char) 명령을 붙여라
     System.out.println((char)('각' + 1));
     System.out.println((char)('각' - 1));
+
+    for (int i = 0; i < 80; i++) {
+      System.out.print((char)('라' + 10*i) + ",");
+    }
   }
 }
