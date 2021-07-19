@@ -26,5 +26,7 @@ public class Exam0130 {
     //- age라는 이름의 메모리에 20을 저장하라!
     //- age 변수에 20을 저장하라!
     //- age에 20을 저장하라! (실무에서는 주로 이 표현을 사용한다)
+
+    System.out.println(age);
   }
 }

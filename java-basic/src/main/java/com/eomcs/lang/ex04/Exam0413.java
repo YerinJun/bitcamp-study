@@ -25,26 +25,29 @@ public class Exam0413 {
     //s2 = l; // 컴파일 오류
     //b2 = l; // 컴파일 오류!
     //c2 = l; // 컴파일 오류!
-
+    System.out.println(l2);
     // int ===> int 이상
     l2 = i;
     i2 = i;
     //s2 = i; // 컴파일 오류!
     //b2 = i; // 컴파일 오류!
     //c2 = i;  // 컴파일 오류!
-    
+    System.out.println(i2);
     // short ===> short 이상
     l2 = s;
     i2 = s;
     s2 = s;
     //b2 = s; // 컴파일 오류!
     //c2 = s; // 컴파일 오류! char(0 ~ 65535) | short(-32768 ~ 32767)
-    
+    System.out.println(s2);
     // byte ===> byte 이상
     l2 = b;
     i2 = b;
     s2 = b;
     b2 = b;
     //c2 = b; // 컴파일 오류! char(0 ~ 65535) | byte(-128 ~ 127)
+    c2 = c;
+    System.out.println(b2);
+    System.out.println(c2);
   }
 }

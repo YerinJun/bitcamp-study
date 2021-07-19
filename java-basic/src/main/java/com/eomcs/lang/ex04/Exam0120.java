@@ -6,14 +6,16 @@ package com.eomcs.lang.ex04;
 //  데이터타입 변수1, 변수2, 변수3;
 //
 public class Exam0120 {
-  
+
   public static void main(String[] args) {
     // 한 번에 한 개씩 변수를 선언할 수 있고,
-    int i1;
-    int i2;
-    int i3;
-    
+    int i1 = 1;
+    int i2 = 2;
+    int i3 = 3;
+
     // 콤마(,)를 사용하여 여러 개의 변수를 한 번에 선언할 수 있다.
-    int j1, j2, j3;
+    int j1 = 1, j2 = 2, j3 = 3;
+
+    System.out.printf("%d, %d, %d, %d, %d, %d",i1, i2, i3, j1, j2, j3);
   }
 }
