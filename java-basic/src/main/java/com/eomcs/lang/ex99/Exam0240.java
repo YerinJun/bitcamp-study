@@ -8,7 +8,7 @@ public class Exam0240 {
 
     System.out.print("나이? ");
     int age = keyboardScanner.nextInt();
-    // nextInt()는 한 개의 토큰을 읽은 후에 줄 바꿈 코드는 읽기 전 상태로 내비둔다.
+    // nextInt()는 한 개의 토큰을 읽은 후에 줄 바꿈 코드는 읽기 전 상태로 내버려둔다.
     // 따라서 다음에 nextLine()을 호출하면 의도치 않게 빈 문자열을 가진 한 줄을 
     // 읽는 상황이 된다. 
     // nextInt() 다음에 nextLine()을 호출할 때 이런 상황이 발생한다.

@@ -26,6 +26,7 @@ public class Exam0230 {
     keyScan.close();
 
     System.out.printf("%d, %f, %b\n", i, f, b);
+
   }
 }
 
