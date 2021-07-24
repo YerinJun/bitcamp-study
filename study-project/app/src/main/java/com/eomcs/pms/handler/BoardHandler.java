@@ -18,8 +18,6 @@ public class BoardHandler {
   public void add() {
     System.out.println("[새 게시글]");
 
-    // 새 회원 정보를 담을 변수를 준비한다.
-    // 낱 개의 변수가 아니라 Member에 정의된 대로 묶음 변수를 만든다.
     Board board = new Board();
 
     board.no = Prompt.inputInt("번호? ");
@@ -27,26 +25,21 @@ public class BoardHandler {
     board.content = Prompt.inputString("내용? ");
     board.writer = Prompt.inputString("작성자? ");
     board.registeredDate = new Date(System.currentTimeMillis());
-    board.viewCount = Prompt.inputInt("조회수? ");
-    board.likes = Prompt.inputInt("좋아요 수? ");
+    //    board.viewCount = 0; // 인스턴스 변수는 생성되는 순간 기본 값이 0으로 설정된다.
 
     this.boards[this.size++] = board;
   }
 
-  //BoardHandler 설계도에 따라 만든 변수(boards, size)를 다룰 수 있도록
-  // 파라미터로 인스턴스 주소를 받는다.
-  //
   public void list() {
     System.out.println("[게시글 목록]");
     for (int i = 0; i < this.size; i++) {
-      System.out.printf("%d, %s, %s, %s, %s, %d, %d\n", 
-          this.boards[i].no,
+      System.out.printf("%d, %s, %s, %s, %d, %d\n", 
+          this.boards[i].no, 
           this.boards[i].title, 
-          this.boards[i].content, 
           this.boards[i].writer,
           this.boards[i].registeredDate,
-          this.boards[i].viewCount,
-          this.boards[i].likes);
+          this.boards[i].viewCount, 
+          this.boards[i].like);
     }
   }
 
@@ -54,23 +47,17 @@ public class BoardHandler {
     System.out.println("[게시글 상세보기]");
     int no = Prompt.inputInt("번호? ");
 
-    Board board = null;
-
-    for (int i = 0; i < this.size; i++) {
-      if (boards[i].no == no) {
-        board = boards[i];
-        break;
-      }
-    }
+    Board board = findByNo(no);
 
     if (board == null) {
       System.out.println("해당 번호의 게시글이 없습니다.");
       return;
     }
+
     System.out.printf("제목: %s\n", board.title);
     System.out.printf("내용: %s\n", board.content);
     System.out.printf("작성자: %s\n", board.writer);
-    System.out.printf("작성일: %s\n", board.registeredDate);
+    System.out.printf("등록일: %s\n", board.registeredDate);
     System.out.printf("조회수: %d\n", ++board.viewCount);
   }
 
@@ -78,22 +65,15 @@ public class BoardHandler {
     System.out.println("[게시글 변경]");
     int no = Prompt.inputInt("번호? ");
 
-    Board board = null;
-
-    for (int i = 0; i < this.size; i++) {
-      if (boards[i].no == no) {
-        board = boards[i];
-        break;
-      }
-    }
+    Board board = findByNo(no);
 
     if (board == null) {
       System.out.println("해당 번호의 게시글이 없습니다.");
       return;
     }
 
-    String title = Prompt.inputString(String.format("제목(%s)?", board.title));
-    String content = Prompt.inputString(String.format("내용(%s)?", board.content));
+    String title = Prompt.inputString(String.format("제목(%s)? ", board.title));
+    String content = Prompt.inputString(String.format("내용(%s)? ", board.content));
 
     String input = Prompt.inputString("정말 변경하시겠습니까?(y/N) ");
     if (input.equalsIgnoreCase("n") || input.length() == 0) {
@@ -104,24 +84,15 @@ public class BoardHandler {
     board.title = title;
     board.content = content;
     System.out.println("게시글을 변경하였습니다.");
-
   }
 
   public void delete() {
-
     System.out.println("[게시글 삭제]");
     int no = Prompt.inputInt("번호? ");
 
-    Board board = null;
+    int boardIndex = indexOf(no);
 
-    for (int i = 0; i < this.size; i++) {
-      if (boards[i].no == no) {
-        board = boards[i];
-        break;
-      }
-    }
-
-    if (board == null) {
+    if (boardIndex == -1) {
       System.out.println("해당 번호의 게시글이 없습니다.");
       return;
     }
@@ -132,11 +103,36 @@ public class BoardHandler {
       return;
     }
 
+    for (int i = boardIndex + 1; i < this.size; i++) {
+      this.boards[i - 1] = this.boards[i];
+    }
+    this.boards[--this.size] = null;
 
     System.out.println("게시글을 삭제하였습니다.");
+  }
 
+  private Board findByNo(int no) {
+    for (int i = 0; i < this.size; i++) {
+      if (this.boards[i].no == no) {
+        return this.boards[i];
+      }
+    }
+    return null;
+  }
 
-
+  private int indexOf(int no) {
+    for (int i = 0; i < this.size; i++) {
+      if (this.boards[i].no == no) {
+        return i;
+      }
+    }
+    return -1;
   }
 }
+
+
+
+
+
+
 

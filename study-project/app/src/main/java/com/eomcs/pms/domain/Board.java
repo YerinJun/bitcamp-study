@@ -9,5 +9,5 @@ public class Board {
   public String writer;
   public Date registeredDate;
   public int viewCount;
-  public int likes;
+  public int like;
 }
