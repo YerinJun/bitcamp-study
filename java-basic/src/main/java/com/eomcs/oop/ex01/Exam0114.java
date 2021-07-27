@@ -16,7 +16,7 @@ public class Exam0114 {
   public static void main(String[] args) {
 
     // 클래스를 이용하면 성적 정보와 같은 여러 개의 값을 한 번에 리턴 받을 수 있다.
-    Score s = createScore("홍길동", 100, 100, 100);
+    Score s = createScore("김개똥", 0, 1, 1);
 
     printScore(s);
   }

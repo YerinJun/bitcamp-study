@@ -56,6 +56,10 @@ public class Exam0970 {
     m1.display();
     m2.display();
     m3.display();
+
+    // 주의!
+    // 임의로 생성자를 호출 할 수 없다.
+    // m1.monitor(); <= 컴파일 오류
   }
 }
 

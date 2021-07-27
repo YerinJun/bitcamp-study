@@ -14,6 +14,8 @@ public class Exam0682 {
     //    ++y++; // 컴파일 오류!
     //    (++y)++; // 컴파일 오류!
     //    ++(y++); // 컴파일 오류!
+    System.out.println(++y);
+    System.out.println(y++);
   }
 }
 
