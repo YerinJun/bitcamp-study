@@ -6,6 +6,8 @@ public class Exam03 {
   public static void main(String[] args) {
     Truck car = m1();
     Car car2 = m2();
+    car.run();
+    car2.run();
   }
 
   static Truck m1() {

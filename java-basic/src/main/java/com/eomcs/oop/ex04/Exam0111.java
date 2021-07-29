@@ -11,7 +11,7 @@ public class Exam0111 {
 
     // => char[] 을 사용하여 String 인스턴스 초기화시키기.
     char[] chars = new char[] {'H', 'e', 'l', 'l', 'o'};
-    String s2 = new String(chars);
+    String s2 = new String(chars); // String (char[]) 를 생성자를 호출하여 인스턴스 초기화 
 
     // => 바이트 배열을 가지고 String 인스턴스 초기화시키기
     byte[] bytes = {
@@ -21,7 +21,7 @@ public class Exam0111 {
         (byte)0x6c, // l
         (byte)0x6f  // o 
     };
-    String s3 = new String(bytes);
+    String s3 = new String(bytes); // String (byte[]) 를 생성자를 호출하여 인스턴스 초기화 
 
     System.out.printf("%s, %s, %s\n", s1, s2, s3);
   }

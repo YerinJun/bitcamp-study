@@ -21,17 +21,20 @@ public class Exam0110 {
     // Bike, Car, Sedan, Truck 객체까지 다양한 서브클래스의 객체를 가리킬 수 있다.
     // 그래서 vehicle2를 "다형적 변수"의 기능을 갖고 있다 말한다.
     Vehicle vehicle2 = null;
+    vehicle2 = vehicle; //OK
     vehicle2 = bike; // OK
     vehicle2 = car; // OK
     vehicle2 = sedan; // OK
     vehicle2 = truck; // OK
 
     Car car2 = null;
+    car2 = car; //OK
     car2 = sedan; // OK
     car2 = truck; // OK
     //    car2 = bike; // Error!
 
     Bike bike2 = null;
+    bike2 = bike; // 자손이 없어서 자기 자신만 받을 수 있다.
     //    bike2 = car; // Error!
     //    bike2 = sedan; // Error!
     //    bike2 = truck; // Error!
