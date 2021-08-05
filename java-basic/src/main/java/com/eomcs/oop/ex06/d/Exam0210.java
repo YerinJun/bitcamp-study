@@ -4,7 +4,7 @@ package com.eomcs.oop.ex06.d;
 
 abstract class Car {
   public abstract void run();
-  public void m() {}
+  public void m() {System.out.println("---");}
 }
 
 class Sedan extends Car {
@@ -23,7 +23,7 @@ public class Exam0210 {
     // 2) 오버라이딩 메서드 호출 규칙에 따라,
     //    - 레퍼런스가 실제 가리키는 객체의 클래스부터 메서드를 찾아 올라간다.
     car.run();
-
+    car.m();
   }
 }
 

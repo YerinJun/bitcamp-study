@@ -15,7 +15,7 @@ class B {
   }
 
   void m2() {
-
+    System.out.println("B class");
   }
 }
 public class Exam0210 extends B {
@@ -30,7 +30,12 @@ public class Exam0210 extends B {
   // 일반 메서드는 오버라이딩 가능!
   @Override
   void m2() {
-
+    System.out.println("Exam0210");
   }
 
+  public static void main(String[] args) {
+    Exam0210 obj = new Exam0210();
+    obj.m1();
+    obj.m2();
+  }
 }
