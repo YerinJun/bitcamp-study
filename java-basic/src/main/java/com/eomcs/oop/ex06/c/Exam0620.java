@@ -78,6 +78,11 @@ public class Exam0620 {
     new TruckFactory().makeCar().run();
     new DumpTruckFactory().makeCar().run();
     new DumpTruckFactory2().makeCar().run();
+    System.out.println();
+    new Car().run();
+    new Sedan().run();
+    new Truck().run();
+    new DumpTruck().run();
   }
 }
 

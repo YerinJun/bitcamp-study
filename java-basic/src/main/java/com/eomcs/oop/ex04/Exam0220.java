@@ -24,6 +24,7 @@ public class Exam0220 {
 
     // 스태틱 메서드 = 클래스 메서드 사용
     int v2 = Integer.parseInt("1280");
+    System.out.println(v2);
     String s1 = Integer.toBinaryString(77);
     String s2 = Integer.toOctalString(77);
     String s3 = Integer.toHexString(77);
